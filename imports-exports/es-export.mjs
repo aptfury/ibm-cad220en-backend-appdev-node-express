@@ -6,4 +6,4 @@ export function logMsg(msg) {
 let t1 = "a";
 let a = "b";
 
-export { t1, a }
+export { t1, a };
