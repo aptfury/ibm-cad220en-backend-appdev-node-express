@@ -1,0 +1,12 @@
+{
+  "name": "nodejsandexpress-mod1",
+  "version": "1.0.0",
+  "description": "Module 1 practice code for NodeJS and Express Class",
+  "license": "ISC",
+  "author": "B Lemarr",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
