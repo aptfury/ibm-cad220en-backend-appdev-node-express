@@ -12,13 +12,13 @@ process.on('uncaughtException', (err, origin) => {
 
 // HTTPS Server Creation
 import https from 'https';
-import { est } from './datetime.js';
+import { respInfo } from './datetime.js';
 
 const port = 8080;
 
 function requestListener(req, res) {
     res.writeHead(200); // Status Code: OK (200)
-    res.end(`The date today is ${est()}`);
+    res.end(respInfo());
 };
 
 const server = https.createServer(requestListener);
