@@ -85,3 +85,12 @@ const message = function() {
 }
 
 setTimeout(message, 3000);
+
+// Callback Hell Example
+firstFunction(args, function() {
+    secondFunction(args, function() {
+        thirdFunction(args, function() {
+            // And so on
+        });
+    });
+});
