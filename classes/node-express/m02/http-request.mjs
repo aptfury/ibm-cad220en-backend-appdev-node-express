@@ -17,12 +17,4 @@ let req = https.request(options, function(response) {
     response.on('end', function() {
         console.log(buffer);
     });
-});
-
-// Error Handling
-req.on('error', function(e) {
-    resultCallback(e.message);
-});
-
-// Closing Request
-req.end();
+}).end();
