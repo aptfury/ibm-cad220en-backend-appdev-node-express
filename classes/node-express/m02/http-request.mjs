@@ -8,7 +8,7 @@ let options = {
 
 https.request(options, function(response) {
     let buffer = '';
-    let result = '';
+    let result = ''; // Unsure about this, it wasn't used in the example
 
     response.on('data', function(chunk) {
         buffer += chunk;
