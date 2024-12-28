@@ -6,7 +6,7 @@ let options = {
     path: '/xml/current_obs/KSFO.xml'
 };
 
-https.request(options, function(response) {
+let req = https.request(options, function(response) {
     let buffer = '';
     let result = ''; // Unsure about this, it wasn't used in the example
 
@@ -17,4 +17,12 @@ https.request(options, function(response) {
     response.on('end', function() {
         console.log(buffer);
     });
-}).end();
+});
+
+// Error Handling
+req.on('error', function(e) {
+    resultCallback(e.message);
+});
+
+// Closing Request
+req.end();
