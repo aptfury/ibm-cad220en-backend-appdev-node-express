@@ -1,0 +1,11 @@
+{
+  "name": "node-express-final",
+  "version": "1.0.0",
+  "description": "Final project for IBM Node.js and Express class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "blakelemarr",
+  "license": "ISC"
+}
