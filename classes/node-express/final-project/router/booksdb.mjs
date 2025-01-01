@@ -51,4 +51,4 @@ let books = {
     }
 }
 
-export { books };
+export { books as default };
