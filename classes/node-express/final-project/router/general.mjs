@@ -22,7 +22,7 @@ public_users.post('/register', (req, res) => {
 
             if (!username || !password) resolve('Unable to register user. Please make sure you have provided a username and password.');
             if (!isValid(username)) resolve('Username must be more than 3 characters and must contain only letters');
-            if (!doesExist(username)) resolve('This username is taken!');
+            if (doesExist(username)) resolve('This username is taken!');
 
             users.push({
                 "username": username,
@@ -139,7 +139,7 @@ public_users.get('/review/:isbn', (req, res) => {
             if (!isbn) resolve(`You must enter a valid ISBN.`);
             if (!book) resolve(`We did not find a book with ISBN-${isbn}.`);
 
-            resolve(`Here\'s what people have to say about ${title} by ${author}!\n${JSON.stringify(reviews, null, 4)}`);
+            resolve(`Here\'s what people have to say about ${title} by ${author}!\n\n${JSON.stringify(reviews, null, 4)}`);
         }
         catch (e) {
             reject(e);
